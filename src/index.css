@@ -113,6 +113,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
   padding: 0.9rem 1.1rem;
   border: 1px solid var(--border);
   border-radius: 1.25rem;
@@ -127,6 +128,7 @@ button {
   align-items: center;
   gap: 0.8rem;
   min-width: 0;
+  flex: 0 1 auto;
 }
 
 .brand-mark {
@@ -146,6 +148,7 @@ button {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  min-width: 0;
 }
 
 .brand-name {
@@ -162,15 +165,20 @@ button {
   letter-spacing: 0.04em;
   color: var(--text-soft);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1 1 16rem;
   gap: 1.5rem;
   color: var(--text-soft);
   font-size: 0.9rem;
   font-weight: 700;
+  min-width: 0;
 }
 
 .desktop-nav a {
@@ -1036,6 +1044,22 @@ button {
   }
 }
 
+@media (max-width: 1100px) {
+  .nav-shell {
+    gap: 0.75rem 1rem;
+  }
+
+  .desktop-nav {
+    gap: 0.9rem 1.15rem;
+    font-size: 0.82rem;
+    flex-wrap: wrap;
+  }
+
+  .brand-tag {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .calculator-grid,
@@ -1055,6 +1079,10 @@ button {
   .desktop-nav,
   .hidden-mobile {
     display: none;
+  }
+
+  .nav-shell {
+    justify-content: space-between;
   }
 
   .mobile-social-links {
