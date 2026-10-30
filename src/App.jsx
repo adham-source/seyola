@@ -517,21 +517,30 @@ function App() {
 
       <footer className="site-footer">
         <div className="container footer-content">
-          <div>
+          <div className="footer-brand">
             <strong>سيولة</strong>
-          <span>خدمات الموبايل والمدفوعات</span>
+            <span>خدمات الموبايل والمدفوعات</span>
           </div>
+
           <div className="footer-meta">
             <span>جاهزون لخدمتكم طوال أيام الأسبوع</span>
             <span className="status-live"><i className="fa-solid fa-circle" /> مفتوح الآن</span>
           </div>
-        <div className="footer-socials" aria-label="روابط التواصل الاجتماعي">
-          {socialLinks.map((social) => (
-            <a key={social.label} href={social.href} target={social.href.startsWith('http') ? '_blank' : undefined} rel={social.href.startsWith('http') ? 'noreferrer' : undefined} className={`social-mini-link social-mini-link--${social.color}`} aria-label={social.label} title={social.label}>
-              <i className={social.icon} />
-            </a>
-          ))}
-        </div>
+
+          <div className="footer-copy">
+            <span>التصميم من إعداد <strong>Meerkats Team</strong></span>
+            <span>لإنشاء مواقع مشابهة عبر واتساب: <a href="https://wa.me/201003509114?text=أرغب%20في%20طلب%20موقع%20مثل%20هذا" target="_blank" rel="noreferrer">
+              01003509114
+            </a></span>
+          </div>
+
+          <div className="footer-socials" aria-label="روابط التواصل الاجتماعي">
+            {socialLinks.map((social) => (
+              <a key={social.label} href={social.href} target={social.href.startsWith('http') ? '_blank' : undefined} rel={social.href.startsWith('http') ? 'noreferrer' : undefined} className={`social-mini-link social-mini-link--${social.color}`} aria-label={social.label} title={social.label}>
+                <i className={social.icon} />
+              </a>
+            ))}
+          </div>
         </div>
       </footer>
     </div>
